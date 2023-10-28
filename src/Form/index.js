@@ -9,7 +9,7 @@ const Form = () => (
             <p className="form__paragraph">
                 <label>
                     <span className="form__labelText">Choose Euro or Dollars:</span>
-                    <select className="form__field currency">
+                    <select className="form__field">
                         <option value="EUR">EUR</option>
                         <option value="USD">USD</option>
                     </select>
@@ -18,7 +18,7 @@ const Form = () => (
             <p className="form__paragraph">
                 <label>
                     <span className="form__labelText">Enter the amount:</span>
-                    <input className="form__field amount" type="number" required min="1" step="1" />
+                    <input className="form__field" type="number" required min="1" step="1" />
                 </label>
             </p>
         </fieldset>
