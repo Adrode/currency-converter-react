@@ -8,7 +8,6 @@ function App() {
       <Header
         title="Currency converter"
       />
-      <main className="main">
         <Paragraph
           text="Convert euros and dollars to Polish zlotys at the exchange rate on 29/03/2023."
         />
@@ -39,7 +38,6 @@ function App() {
           text="Amount in PLN: "
           value="N/A"
         />
-      </main>
       <Footer
         text="Page by Adrian W."
       />
