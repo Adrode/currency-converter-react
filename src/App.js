@@ -1,11 +1,12 @@
 import Header from "./Header";
+import Footer from "./Footer";
 
 function App() {
   return (
     <>
       <Header
-        title="Currnecy converter">
-      </Header>
+        title="Currnecy converter"
+      />
       <main className="main">
         <p className="main__paragraph">
           Convert euros and dollars to Polish zlotys at the exchange rate on 29/03/2023.
@@ -37,7 +38,9 @@ function App() {
           Amount in PLN: <strong>N/A</strong>
         </p>
       </main>
-      <footer className="footer">Page by Adrian W.</footer>
+      <Footer
+        text="Page by Adrian W."
+      />
     </>
   );
 }
