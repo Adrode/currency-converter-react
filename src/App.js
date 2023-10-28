@@ -1,16 +1,17 @@
 import Header from "./Header";
+import Paragraph from "./Paragraph";
 import Footer from "./Footer";
 
 function App() {
   return (
     <>
       <Header
-        title="Currnecy converter"
+        title="Currency converter"
       />
       <main className="main">
-        <p className="main__paragraph">
-          Convert euros and dollars to Polish zlotys at the exchange rate on 29/03/2023.
-        </p>
+        <Paragraph
+          text="Convert euros and dollars to Polish zlotys at the exchange rate on 29/03/2023."
+        />
         <form className="form">
           <fieldset className="form__fieldset">
             <legend className="form__legend">
@@ -34,9 +35,10 @@ function App() {
           </fieldset>
           <button className="form__submit">Convert</button>
         </form>
-        <p>
-          Amount in PLN: <strong>N/A</strong>
-        </p>
+        <Paragraph
+          text="Amount in PLN: "
+          value="N/A"
+        />
       </main>
       <Footer
         text="Page by Adrian W."
