@@ -1,13 +1,11 @@
-
+import Header from "./Header";
 
 function App() {
   return (
     <>
-      <header className="header">
-        <h1 className="header__title">
-          Currency converter
-        </h1>
-      </header>
+      <Header
+        title="Currnecy converter">
+      </Header>
       <main className="main">
         <p className="main__paragraph">
           Convert euros and dollars to Polish zlotys at the exchange rate on 29/03/2023.
