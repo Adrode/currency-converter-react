@@ -3,7 +3,6 @@ import "./style.css";
 const Form = ({ currency, setCurrency, inputValue, setInputValue }) => {
     const onFormSubmit = (event) => {
         event.preventDefault();
-        console.log(inputValue);
     };
 
     const onSelectChange = ({ target }) => setCurrency(target.value);
