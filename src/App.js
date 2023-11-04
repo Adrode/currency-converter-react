@@ -7,22 +7,14 @@ import Form from "./Form";
 function App() {
   const [currency, setCurrency] = useState("EUR");
   const [inputValue, setInputValue] = useState("");
-  //const [count, setCount] = useState("");
+  const [result, setResult] = useState("N/A");
 
   const countResult = (currency, inputValue) => {
     const EUR = 4.46;
     const USD = 4.15;
-    let result;
 
-    if (currency === "EUR") {
-      result = EUR * inputValue;
-      console.log(result.toFixed(2));
-    }
-
-    else if (currency === "USD") {
-      result = USD * inputValue;
-      console.log(result.toFixed(2));
-    }
+    if (currency === "EUR") setResult(result => result = EUR * inputValue);
+    else if (currency === "USD") setResult(result => result = USD * inputValue);
   };
 
   return (
@@ -42,7 +34,7 @@ function App() {
       />
       <Paragraph
         text="Amount in PLN: "
-      //value={value}
+        value={result}
       />
       <Footer
         text="Page by Adrian W."
