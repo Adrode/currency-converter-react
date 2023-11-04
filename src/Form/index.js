@@ -1,11 +1,14 @@
 import "./style.css";
 
-const Form = ({ currency, setCurrency }) => {
+const Form = ({ currency, setCurrency, inputValue, setInputValue }) => {
     const onFormSubmit = (event) => {
         event.preventDefault();
+        console.log(inputValue);
     };
 
     const onSelectChange = ({ target }) => setCurrency(target.value);
+
+    const onInputChange = ({ target }) => setInputValue(target.value);
 
     return (
         <form className="form">
@@ -16,7 +19,11 @@ const Form = ({ currency, setCurrency }) => {
                 <p className="form__paragraph">
                     <label>
                         <span className="form__labelText">Choose Euro or Dollars:</span>
-                        <select className="form__field" value={currency} onChange={onSelectChange}>
+                        <select
+                            className="form__field"
+                            value={currency}
+                            onChange={onSelectChange}
+                        >
                             <option>EUR</option>
                             <option>USD</option>
                         </select>
@@ -25,7 +32,15 @@ const Form = ({ currency, setCurrency }) => {
                 <p className="form__paragraph">
                     <label>
                         <span className="form__labelText">Enter the amount:</span>
-                        <input className="form__field" type="number" required min="1" step="1" />
+                        <input
+                        className="form__field"
+                        type="number"
+                        required={true}
+                        min="1"
+                        step="1"
+                        value={inputValue}
+                        onChange={onInputChange}
+                        />
                     </label>
                 </p>
             </fieldset>

@@ -7,6 +7,8 @@ import Form from "./Form";
 function App() {
   const [currency, setCurrency] = useState("EUR");
 
+  const [inputValue, setInputValue] = useState("");
+
   return (
     <>
       <Header
@@ -18,6 +20,8 @@ function App() {
       <Form
         currency={currency}
         setCurrency={setCurrency}
+        inputValue={inputValue}
+        setInputValue={setInputValue}
       />
       <Paragraph
         text="Amount in PLN: "
