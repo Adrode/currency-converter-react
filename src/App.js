@@ -1,9 +1,12 @@
+import { useState } from 'react';
 import Header from "./Header";
 import Paragraph from "./Paragraph";
 import Footer from "./Footer";
 import Form from "./Form";
 
 function App() {
+  const [currency, setCurrency] = useState("EUR");
+
   return (
     <>
       <Header
@@ -12,7 +15,10 @@ function App() {
       <Paragraph
         text="Convert euros and dollars to Polish zlotys at the exchange rate on 29/03/2023."
       />
-      <Form />
+      <Form
+        currency={currency}
+        setCurrency={setCurrency}
+      />
       <Paragraph
         text="Amount in PLN: "
         value="N/A"
