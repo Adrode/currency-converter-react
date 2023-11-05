@@ -1,6 +1,6 @@
 # Currency Converter
 
-[Currency Converter Page](https://adrode.github.io/currency-converter)
+[Currency Converter Page](https://adrode.github.io/currency-converter-react/)
 
 ![Currency Converter page image](src/images/converterPageImage.png)
 
