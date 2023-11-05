@@ -9,10 +9,10 @@ function App() {
   const [inputValue, setInputValue] = useState("");
   const [result, setResult] = useState("N/A");
 
-  const countResult = (currency, inputValue) => {
-    const EUR = 4.46;
-    const USD = 4.15;
+  const EUR = 4.46;
+  const USD = 4.15;
 
+  const countResult = (currency, inputValue) => {
     if (currency === "EUR") setResult(result => result = EUR * inputValue);
     else if (currency === "USD") setResult(result => result = USD * inputValue);
   };
@@ -24,6 +24,14 @@ function App() {
       />
       <Paragraph
         text="Convert euros and dollars to Polish zlotys at the exchange rate on 04/11/2023."
+      />
+      <Paragraph
+        text="EUR = "
+        value={EUR}
+      />
+      <Paragraph
+        text="USD = "
+        value={USD}
       />
       <Form
         currency={currency}
