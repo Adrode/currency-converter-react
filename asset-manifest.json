@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Adrode/currency-converter-react/static/css/main.80f8cf4e.css",
+    "main.js": "/Adrode/currency-converter-react/static/js/main.c57b144c.js",
+    "static/js/787.2dbbe128.chunk.js": "/Adrode/currency-converter-react/static/js/787.2dbbe128.chunk.js",
+    "static/media/lightBackground.png": "/Adrode/currency-converter-react/static/media/lightBackground.4aeb67dc5bb4ee0c33a0.png",
+    "index.html": "/Adrode/currency-converter-react/index.html",
+    "main.80f8cf4e.css.map": "/Adrode/currency-converter-react/static/css/main.80f8cf4e.css.map",
+    "main.c57b144c.js.map": "/Adrode/currency-converter-react/static/js/main.c57b144c.js.map",
+    "787.2dbbe128.chunk.js.map": "/Adrode/currency-converter-react/static/js/787.2dbbe128.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.80f8cf4e.css",
+    "static/js/main.c57b144c.js"
+  ]
+}
