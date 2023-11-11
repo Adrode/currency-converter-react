@@ -11,7 +11,7 @@ const Form = ({ currency, setCurrency, inputValue, setInputValue, countResult })
     const onInputChange = ({ target }) => setInputValue(target.value);
 
     return (
-        <form className="form">
+        <form className="form" onSubmit={onFormSubmit}>
             <fieldset className="form__fieldset">
                 <legend className="form__legend">
                     Converter
@@ -46,7 +46,7 @@ const Form = ({ currency, setCurrency, inputValue, setInputValue, countResult })
             </fieldset>
             <button
                 className="form__submit"
-                onClick={onFormSubmit}
+                type="submit"
             >
                 Convert
             </button>
