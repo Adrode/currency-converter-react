@@ -1,7 +1,13 @@
 import "./style.css";
 
-const Paragraph = ({ text, value }) => (
-    <p className="paragraph">{text}<strong>{value}</strong></p>
-);
+const Paragraph = ({ text, value }) => {
+    if (typeof value === "number") {
+        return (
+            <p className="paragraph">{text}<strong>{value.toFixed(2)}</strong></p>
+        );
+    }
+
+    return null;
+};
 
 export default Paragraph;
