@@ -35,9 +35,9 @@ const Form = ({ currency, setCurrency, inputValue, setInputValue, countResult })
                         <input
                             className="form__field"
                             type="number"
-                            required={true} // dlaczego required nie działa? jest pomijany w działaniu
+                            required={true}
                             min="1"
-                            step="1" // step oraz min również są pomijane
+                            step="1"
                             value={inputValue}
                             onChange={onInputChange}
                         />
