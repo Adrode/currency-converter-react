@@ -13,8 +13,17 @@ function App() {
   const USD = 4.15;
 
   const countResult = (currency, inputValue) => {
-    if (currency === "EUR") setResult(result => result = EUR * inputValue);
-    else if (currency === "USD") setResult(result => result = USD * inputValue);
+    switch (currency) {
+      case "EUR":
+        setResult(result => result = EUR * inputValue);
+        break;
+      case "USD":
+        setResult(result => result = USD * inputValue);
+        break;
+      default:
+        alert("Something went wrong");
+        break;
+    };
   };
 
   return (
