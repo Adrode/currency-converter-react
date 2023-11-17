@@ -1,13 +1,12 @@
 import "./style.css";
 
-const Form = ({ currency, setCurrency, inputValue, setInputValue, countResult }) => {
+const Form = ({ currenciesTable, currency, setCurrency, inputValue, setInputValue, countResult }) => {
     const onFormSubmit = (event) => {
         event.preventDefault();
         countResult(currency, inputValue);
     };
 
     const onSelectChange = ({ target }) => setCurrency(target.value);
-
     const onInputChange = ({ target }) => setInputValue(target.value);
 
     return (
@@ -27,6 +26,7 @@ const Form = ({ currency, setCurrency, inputValue, setInputValue, countResult })
                             <option>EUR</option>
                             <option>USD</option>
                         </select>
+                        
                     </label>
                 </p>
                 <p className="form__paragraph">
