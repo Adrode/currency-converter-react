@@ -1,7 +1,11 @@
+import { useState } from 'react';
 import "./style.css";
 import { currencies } from '../currencies';
 
-const Form = ({ currency, setCurrency, inputValue, setInputValue, countResult }) => {
+const Form = ({ countResult }) => {
+    const [currency, setCurrency] = useState(currencies[0].name);
+    const [inputValue, setInputValue] = useState("");
+
     const onFormSubmit = (event) => {
         event.preventDefault();
         countResult(currency, inputValue);
@@ -25,7 +29,12 @@ const Form = ({ currency, setCurrency, inputValue, setInputValue, countResult })
                             onChange={onSelectChange}
                         >
                             {currencies.map(sourceCurrency => (
-                                <option key={sourceCurrency.id}>{sourceCurrency.fullname}</option>
+                                <option
+                                    key={sourceCurrency.id}
+                                    value={sourceCurrency.name}
+                                >
+                                    {sourceCurrency.fullname}
+                                </option>
                             ))}
                         </select>
 
