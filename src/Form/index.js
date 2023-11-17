@@ -1,4 +1,5 @@
 import "./style.css";
+import { currencies } from '../currencies';
 
 const Form = ({ currency, setCurrency, inputValue, setInputValue, countResult }) => {
     const onFormSubmit = (event) => {
@@ -23,10 +24,11 @@ const Form = ({ currency, setCurrency, inputValue, setInputValue, countResult })
                             value={currency}
                             onChange={onSelectChange}
                         >
-                            <option>EUR</option>
-                            <option>USD</option>
+                            {currencies.map(sourceCurrency => (
+                                <option key={sourceCurrency.id}>{sourceCurrency.fullname}</option>
+                            ))}
                         </select>
-                        
+
                     </label>
                 </p>
                 <p className="form__paragraph">

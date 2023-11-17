@@ -3,12 +3,12 @@ import { currencies } from '../currencies';
 
 const GridContainer = () => (
     <div className="grid">
-        {currencies.map(currency => (
+        {currencies.map(sourceCurrency => (
             <p
                 className="grid__element"
-                key={currency.id}
+                key={sourceCurrency.id}
             >
-                {currency.name}{" = "}<strong>{currency.rate}</strong></p>
+                {sourceCurrency.name}{" = "}<strong>{sourceCurrency.rate}</strong></p>
         ))}
     </div>
 );
