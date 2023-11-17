@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { currencies } from './currencies';
 import Header from "./Header";
 import Paragraph from "./Paragraph";
+import GridContainer from './GridContainer';
 import Footer from "./Footer";
 import Form from "./Form";
 
@@ -35,24 +36,7 @@ function App() {
       <Paragraph
         text="Convert euros and dollars to Polish zlotys at the exchange rate on 17/11/2023 by NBP."
       />
-      <div className="grid">
-        <Paragraph
-          text={currencies[0].name}
-          value={currencies[0].rate}
-        />
-        <Paragraph
-          text={currencies[1].name}
-          value={currencies[1].rate}
-        />
-        <Paragraph
-          text={currencies[2].name}
-          value={currencies[2].rate}
-        />
-        <Paragraph
-          text={currencies[3].name}
-          value={currencies[3].rate}
-        />
-      </div>
+      <GridContainer />
       <Form
         currency={currency}
         setCurrency={setCurrency}
