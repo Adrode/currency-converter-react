@@ -7,7 +7,7 @@ const Paragraph = ({ text, value }) => {
         );
     }
 
-    return null;
+    return <p className="paragraph">{text}</p>;
 };
 
 export default Paragraph;
