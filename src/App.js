@@ -44,6 +44,14 @@ function App() {
           text={currencies[1].name}
           value={currencies[1].rate}
         />
+        <Paragraph
+          text={currencies[2].name}
+          value={currencies[2].rate}
+        />
+        <Paragraph
+          text={currencies[3].name}
+          value={currencies[3].rate}
+        />
       </div>
       <Form
         currency={currency}
