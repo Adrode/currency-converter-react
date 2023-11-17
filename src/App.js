@@ -9,20 +9,6 @@ import Form from "./Form";
 function App() {
   const [result, setResult] = useState(0);
 
-  /*const countResult = (currency, inputValue) => {
-    switch (currency) {
-      case "EUR":
-        setResult(result => result = EUR * inputValue);
-        break;
-      case "USD":
-        setResult(result => result = USD * inputValue);
-        break;
-      default:
-        alert("Something went wrong");
-        break;
-    };
-  };*/
-
   const countResult = (currency, inputValue) => {
     const rate = currencies.find(({ name }) => name === currency).rate;
 
