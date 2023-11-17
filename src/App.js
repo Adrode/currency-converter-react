@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { currencies } from "./currencies";
 import Header from "./Header";
 import Paragraph from "./Paragraph";
 import GridContainer from './GridContainer';
@@ -6,7 +7,7 @@ import Footer from "./Footer";
 import Form from "./Form";
 
 function App() {
-  const [result, setResult] = useState("N/A");
+  const [result, setResult] = useState(0);
 
   /*const countResult = (currency, inputValue) => {
     switch (currency) {
@@ -22,6 +23,11 @@ function App() {
     };
   };*/
 
+  const countResult = (currency, inputValue) => {
+    const rate = currencies.find(({ name }) => name === currency).rate;
+
+    setResult(inputValue * rate);
+  };
 
   return (
     <>
@@ -34,10 +40,10 @@ function App() {
       />
       <GridContainer />
       <Form
-        //countResult={countResult}
+        countResult={countResult}
       />
       <Paragraph
-        text="Amount in PLN"
+        text="RESULT: "
         value={result}
       />
       <Footer
