@@ -22,6 +22,7 @@
 .form__labelText {
     display: inline-block;
     width: 200px;
+    padding-bottom: 10px;
 }
 
 .form__field {
