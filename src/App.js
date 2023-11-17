@@ -37,12 +37,12 @@ function App() {
       />
       <div className="grid">
         <Paragraph
-          text="EUR = "
-          value={EUR}
+          text={currencies[0].name}
+          value={currencies[0].rate}
         />
         <Paragraph
-          text="USD = "
-          value={USD}
+          text={currencies[1].name}
+          value={currencies[1].rate}
         />
       </div>
       <Form
@@ -53,7 +53,7 @@ function App() {
         countResult={countResult}
       />
       <Paragraph
-        text="Amount in PLN: "
+        text="Amount in PLN"
         value={result}
       />
       <Footer
