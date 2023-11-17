@@ -1,6 +1,6 @@
 import { useState } from 'react';
+import { currencies } from "../App/currencies";
 import "./style.css";
-import { currencies } from '../currencies';
 
 const Form = ({ countResult }) => {
     const [currency, setCurrency] = useState(currencies[0].name);

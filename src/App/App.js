@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { currencies } from "./currencies";
-import Header from "./Header";
-import Paragraph from "./Paragraph";
-import GridContainer from './GridContainer';
-import Footer from "./Footer";
-import Form from "./Form";
+import Header from "../Header";
+import Paragraph from "../Paragraph";
+import GridContainer from '../GridContainer';
+import Footer from "../Footer";
+import Form from "../Form";
 
 function App() {
   const [result, setResult] = useState(0);

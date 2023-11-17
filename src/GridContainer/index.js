@@ -1,5 +1,5 @@
 import './style.css';
-import { currencies } from '../currencies';
+import { currencies } from '../App/currencies';
 
 const GridContainer = () => (
     <div className="grid">
