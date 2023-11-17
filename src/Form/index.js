@@ -1,6 +1,6 @@
 import "./style.css";
 
-const Form = ({ currenciesTable, currency, setCurrency, inputValue, setInputValue, countResult }) => {
+const Form = ({ currency, setCurrency, inputValue, setInputValue, countResult }) => {
     const onFormSubmit = (event) => {
         event.preventDefault();
         countResult(currency, inputValue);

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { currencies } from './currencies';
 import Header from "./Header";
 import Paragraph from "./Paragraph";
 import Footer from "./Footer";
