@@ -18,7 +18,7 @@ const Form = ({ currency, setCurrency, inputValue, setInputValue, countResult })
                 </legend>
                 <p className="form__paragraph">
                     <label>
-                        <span className="form__labelText">Choose Euro or Dollars:</span>
+                        <span className="form__labelText">Choose currency:</span>
                         <select
                             className="form__field"
                             value={currency}
