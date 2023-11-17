@@ -34,14 +34,16 @@ function App() {
       <Paragraph
         text="Convert euros and dollars to Polish zlotys at the exchange rate on 17/11/2023 by NBP."
       />
-      <Paragraph
-        text="EUR = "
-        value={EUR}
-      />
-      <Paragraph
-        text="USD = "
-        value={USD}
-      />
+      <div className="grid">
+        <Paragraph
+          text="EUR = "
+          value={EUR}
+        />
+        <Paragraph
+          text="USD = "
+          value={USD}
+        />
+      </div>
       <Form
         currency={currency}
         setCurrency={setCurrency}

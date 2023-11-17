@@ -1,4 +1,9 @@
-.paragraph {
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid__paragraph {
     text-align: center;
     line-height: 1.5;
 }
