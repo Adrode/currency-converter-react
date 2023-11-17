@@ -9,7 +9,7 @@ function App() {
   const [inputValue, setInputValue] = useState("");
   const [result, setResult] = useState("N/A");
 
-  const currencies = [
+  const currenciesTable = [
     {
       type: "EUR",
       value: 4.37,
@@ -25,7 +25,7 @@ function App() {
   ];
 
   const countResult2 = () => {
-    
+
   };
 
   const EUR = 4.46;
@@ -55,15 +55,15 @@ function App() {
       />
       <Paragraph
         text="EUR = "
-        value={currencies[0].value}
+        value={currenciesTable[0].value}
       />
       <Paragraph
         text="USD = "
-        value={currencies[1].value}
+        value={currenciesTable[1].value}
       />
       <Paragraph
         text="GBP = "
-        value={currencies[2].value}
+        value={currenciesTable[2].value}
       />
       <Form
         currency={currency}
