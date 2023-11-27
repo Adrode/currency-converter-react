@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { currencies } from "./currencies";
+import Container from "../Container";
 import Header from "../Header";
 import Paragraph from "../Paragraph";
 import GridContainer from '../GridContainer';
@@ -16,7 +17,7 @@ function App() {
   };
 
   return (
-    <>
+    <Container>
       <Header
         title="Currency converter"
       />
@@ -35,7 +36,7 @@ function App() {
       <Footer
         text="Page by Adrian W."
       />
-    </>
+    </Container>
   );
 }
 
