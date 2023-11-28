@@ -8,8 +8,18 @@ import Footer from "../Footer";
 import Form from "../Form";
 
 function App() {
+  const dateOptions = {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric",
+  };
+
   const [result, setResult] = useState(0);
-  const [date, setDate] = useState(new Date().toLocaleString());
+  const [date, setDate] = useState(new Date().toLocaleDateString(undefined, dateOptions));
 
   const countResult = (currency, inputValue) => {
     const rate = currencies.find(({ name }) => name === currency).rate;
@@ -18,11 +28,14 @@ function App() {
   };
 
   useEffect(() => {
-    setInterval(() => {
-      setDate(date => date = new Date().toLocaleString());
-      console.log(date); // do sprawdzenia
+    const updateDateInterval = setInterval(() => {
+      setDate(date => date = new Date().toLocaleDateString(undefined, dateOptions));
     }, 1000);
-  }, [date])
+
+    return () => {
+      clearInterval(updateDateInterval);
+    };
+  });
 
   return (
     <Container>
