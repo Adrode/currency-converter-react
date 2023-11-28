@@ -4,7 +4,7 @@
 
 ![Currency Converter page image](src/images/converterPageImage.png)
 
-Simple page for converting EUR or USD to PLN.\
+Simple page for converting EUR, USD, CHF or GBP to PLN.\
  Use select input to choose between currencies, type any value and press 'Convert' button to see the result below.
 
 The code includes:
@@ -16,10 +16,11 @@ The code includes:
  - CSS:
     - simple CSS styling,
     - transition, transform
- - JS,
- - React:
+ - JS, React:
     - useState,
     - Controlled Components,
+    - useEffect,
+    - Intervals
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
