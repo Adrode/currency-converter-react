@@ -2,7 +2,7 @@
 
 [Currency Converter Page](https://adrode.github.io/currency-converter-react/)
 
-![Currency Converter page image](src/images/converterPageImage.png)
+![Currency Converter page image](src/images/converterWebpageImage.png)
 
 Simple page for converting EUR, USD, CHF or GBP to PLN.\
  Use select input to choose between currencies, type any value and press 'Convert' button to see the result below.
