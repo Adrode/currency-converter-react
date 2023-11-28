@@ -1,3 +1,10 @@
 .header__title {
     text-align: center;
 }
+
+.header__date {
+    text-align: right;
+    font-size: small;
+    font-family: monospace;
+    margin: 0;
+}

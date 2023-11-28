@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { currencies } from "./currencies";
 import Container from "../Container";
 import Header from "../Header";
@@ -9,6 +9,7 @@ import Form from "../Form";
 
 function App() {
   const [result, setResult] = useState(0);
+  const [date, setDate] = useState(new Date().toLocaleString());
 
   const countResult = (currency, inputValue) => {
     const rate = currencies.find(({ name }) => name === currency).rate;
@@ -16,9 +17,17 @@ function App() {
     setResult(inputValue * rate);
   };
 
+  useEffect(() => {
+    setInterval(() => {
+      setDate(date => date = new Date().toLocaleString());
+      console.log(date); // do sprawdzenia
+    }, 1000);
+  }, [date])
+
   return (
     <Container>
       <Header
+        date={date}
         title="Currency converter"
       />
       <Paragraph
