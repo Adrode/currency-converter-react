@@ -19,7 +19,7 @@ function App() {
   };
 
   const [result, setResult] = useState(0);
-  const [date, setDate] = useState(new Date().toLocaleDateString(undefined, dateOptions));
+  const [date, setDate] = useState(new Date());
 
   const countResult = (currency, inputValue) => {
     const rate = currencies.find(({ name }) => name === currency).rate;
@@ -29,7 +29,7 @@ function App() {
 
   useEffect(() => {
     const updateDateInterval = setInterval(() => {
-      setDate(date => date = new Date().toLocaleDateString(undefined, dateOptions));
+      setDate(date => date = new Date());
     }, 1000);
 
     return () => {
@@ -40,7 +40,7 @@ function App() {
   return (
     <Container>
       <Header
-        date={date}
+        date={date.toLocaleDateString(undefined, dateOptions)}
         title="Currency converter"
       />
       <Paragraph
