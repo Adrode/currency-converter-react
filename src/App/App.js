@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { currencies } from "./currencies";
 import Container from "../Container";
+import Clock from "../Clock";
 import Header from "../Header";
 import Paragraph from "../Paragraph";
 import GridContainer from '../GridContainer';
@@ -8,18 +9,7 @@ import Footer from "../Footer";
 import Form from "../Form";
 
 function App() {
-  const dateOptions = {
-    weekday: "long",
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    hour: "numeric",
-    minute: "numeric",
-    second: "numeric",
-  };
-
   const [result, setResult] = useState(0);
-  const [date, setDate] = useState(new Date());
 
   const countResult = (currency, inputValue) => {
     const rate = currencies.find(({ name }) => name === currency).rate;
@@ -27,20 +17,10 @@ function App() {
     setResult(inputValue * rate);
   };
 
-  useEffect(() => {
-    const updateDateInterval = setInterval(() => {
-      setDate(date => date = new Date());
-    }, 1000);
-
-    return () => {
-      clearInterval(updateDateInterval);
-    };
-  });
-
   return (
     <Container>
+      <Clock />
       <Header
-        date={date.toLocaleDateString(undefined, dateOptions)}
         title="Currency converter"
       />
       <Paragraph
