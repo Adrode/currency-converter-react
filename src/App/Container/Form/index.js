@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { currencies } from "../../currencies";
-import "./style.css";
+import { StyledForm, Fieldset, Legend, Paragraph, LabelText, Field, Button } from "./styled";
 
 const Form = ({ countResult }) => {
     const [currency, setCurrency] = useState(currencies[0].name);
@@ -15,16 +15,15 @@ const Form = ({ countResult }) => {
     const onInputChange = ({ target }) => setInputValue(target.value);
 
     return (
-        <form className="form" onSubmit={onFormSubmit}>
-            <fieldset className="form__fieldset">
-                <legend className="form__legend">
+        <StyledForm onSubmit={onFormSubmit}>
+            <Fieldset>
+                <Legend>
                     Converter
-                </legend>
-                <p className="form__paragraph">
+                </Legend>
+                <Paragraph>
                     <label>
-                        <span className="form__labelText">Choose currency:</span>
-                        <select
-                            className="form__field"
+                        <LabelText>Choose currency:</LabelText>
+                        <Field
                             value={currency}
                             onChange={onSelectChange}
                         >
@@ -36,15 +35,15 @@ const Form = ({ countResult }) => {
                                     {sourceCurrency.fullname}
                                 </option>
                             ))}
-                        </select>
+                        </Field>
 
                     </label>
-                </p>
-                <p className="form__paragraph">
+                </Paragraph>
+                <Paragraph>
                     <label>
-                        <span className="form__labelText">Enter the amount:</span>
-                        <input
-                            className="form__field"
+                        <LabelText>Enter the amount:</LabelText>
+                        <Field
+                            as="input"
                             type="number"
                             required={true}
                             min="1"
@@ -53,15 +52,14 @@ const Form = ({ countResult }) => {
                             onChange={onInputChange}
                         />
                     </label>
-                </p>
-            </fieldset>
-            <button
-                className="form__submit"
+                </Paragraph>
+            </Fieldset>
+            <Button
                 type="submit"
             >
                 Convert
-            </button>
-        </form>
+            </Button>
+        </StyledForm>
     )
 };
 

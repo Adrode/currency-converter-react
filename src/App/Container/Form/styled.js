@@ -1,38 +1,40 @@
-.form {
+import styled from "styled-components";
+
+export const StyledForm = styled.form`
     margin: 40px auto;
     width: 100%;
-}
+`;
 
-.form__fieldset {
+export const Fieldset = styled.fieldset`
     padding: 20px;
     background-color: #222;
-}
+`;
 
-.form__legend {
+export const Legend = styled.legend`
     border: 2px solid #eee;
     border-radius: 15px 0px;
     background-color: #222;
     padding: 7px 15px;
     text-transform: uppercase;
-}
+`;
 
-.form__paragraph {
+export const Paragraph = styled.p`
     text-align: center;
-}
+`;
 
-.form__labelText {
+export const LabelText = styled.span`
     display: inline-block;
     width: 200px;
     padding-bottom: 10px;
-}
+`;
 
-.form__field {
+export const Field = styled.select`
     max-width: 300px;
     width: 100%;
     padding: 7px;
-}
+`;
 
-.form__submit {
+export const Button = styled.button`
     text-transform: uppercase;
     margin-top: 20px;
     border: 2px solid #eee;
@@ -42,13 +44,13 @@
     color: #eee;
     background-color: #222;
     transition: 0.5s;
-}
 
-.form__submit:hover {
-    background-color: hsl(0, 0%, 25%);
-    transform: scale(1.05);
-}
+    &:hover {
+        background-color: hsl(0, 0%, 25%);
+        transform: scale(1.05);
+    }
 
-.form__submit:active {
-    background-color: hsl(0, 0%, 15%);
-}
+    &:active {
+        background-color: hsl(0, 0%, 15%);
+    }
+`;

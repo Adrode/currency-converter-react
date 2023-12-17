@@ -1,13 +1,12 @@
-import "./style.css";
+import { StyledParagraph } from "./styled";
 
 const Paragraph = ({ text, value }) => {
     if (typeof value === "number") {
         return (
-            <p className="paragraph">{text}<strong>{value.toFixed(2)}{" PLN"}</strong></p>
+            <StyledParagraph>{text}<strong>{value.toFixed(2)}{" PLN"}</strong></StyledParagraph>
         );
     }
-
-    return <p className="paragraph">{text}</p>;
+    return <StyledParagraph>{text}</StyledParagraph>;
 };
 
 export default Paragraph;

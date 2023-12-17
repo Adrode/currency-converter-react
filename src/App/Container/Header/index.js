@@ -1,14 +1,14 @@
-import "./style.css";
+import { HeaderTitle } from "./styled";
 
 const Header = ({ title, date }) => {
     return (
-        <header className="header">
-            <p className="header__date">
+        <header>
+            <div>
                 {date}
-            </p>
-            <h1 className="header__title">
+            </div>
+            <HeaderTitle>
                 {title}
-            </h1>
+            </HeaderTitle>
         </header>
     )
 };

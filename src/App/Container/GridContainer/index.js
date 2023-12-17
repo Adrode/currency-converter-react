@@ -1,16 +1,16 @@
-import './style.css';
 import { currencies } from '../../currencies';
+import { Container, Element } from "./styled";
 
 const GridContainer = () => (
-    <div className="grid">
+    <Container>
         {currencies.map(sourceCurrency => (
-            <p
-                className="grid__element"
+            <Element
                 key={sourceCurrency.id}
             >
-                {sourceCurrency.name}{" = "}<strong>{sourceCurrency.rate}</strong></p>
+                {sourceCurrency.name}{" = "}<strong>{sourceCurrency.rate}</strong>
+            </Element>
         ))}
-    </div>
+    </Container>
 );
 
 export default GridContainer;
