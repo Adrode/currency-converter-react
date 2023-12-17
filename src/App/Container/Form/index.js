@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { currencies } from "../App/currencies";
+import { currencies } from "../../currencies";
 import "./style.css";
 
 const Form = ({ countResult }) => {
