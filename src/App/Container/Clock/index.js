@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import "./style.css";
+import { StyledDate } from "./styled";
 
 const Clock = () => {
     const dateOptions = {
@@ -25,9 +25,9 @@ const Clock = () => {
     });
 
     return (
-        <div className="date">
+        <StyledDate>
             {date.toLocaleDateString(undefined, dateOptions)}
-        </div>
+        </StyledDate>
     )
 };
 
