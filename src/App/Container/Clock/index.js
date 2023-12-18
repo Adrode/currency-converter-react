@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useCurrentDate } from "./useCurrentDate";
 import { StyledDate } from "./styled";
 
 const Clock = () => {
@@ -12,18 +12,8 @@ const Clock = () => {
         second: "numeric",
     };
 
-    const [date, setDate] = useState(new Date());
-
-    useEffect(() => {
-        const updateDateInterval = setInterval(() => {
-            setDate(date => date = new Date());
-        }, 1000);
-
-        return () => {
-            clearInterval(updateDateInterval);
-        };
-    });
-
+    const date = useCurrentDate();
+    
     return (
         <StyledDate>
             {date.toLocaleDateString(undefined, dateOptions)}
