@@ -7,13 +7,13 @@ export const StyledForm = styled.form`
 
 export const Fieldset = styled.fieldset`
     padding: 20px;
-    background-color: #222;
+    background-color: ${({ theme }) => theme.main};
 `;
 
 export const Legend = styled.legend`
     border: 2px solid #eee;
     border-radius: 15px 0px;
-    background-color: #222;
+    background-color: ${({ theme }) => theme.main};
     padding: 7px 15px;
     text-transform: uppercase;
 `;
@@ -42,7 +42,7 @@ export const Button = styled.button`
     padding: 10px;
     width: 100%;
     color: #eee;
-    background-color: #222;
+    background-color: ${({ theme }) => theme.main};
     transition: 0.5s;
 
     &:hover {

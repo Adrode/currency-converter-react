@@ -10,7 +10,7 @@ import Footer from "./Container/Footer";
 import Form from "./Container/Form";
 
 const theme = {
-  primaryColor: "#222",
+  main: "#222",
 };
 
 function App() {
@@ -50,4 +50,3 @@ function App() {
 }
 
 export default App;
-export { theme };

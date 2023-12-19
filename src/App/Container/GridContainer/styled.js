@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { theme } from "../../App";
 
 export const Container = styled.div`
     display: grid;
@@ -13,5 +12,5 @@ export const Element = styled.p`
     border: 1px solid white;
     padding: 10px 0px;
     margin: 10px;
-    background-color: ${(theme) => theme.primaryColor};
+    background-color: ${({theme}) => theme.main};
 `;
