@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { currencies } from "./currencies";
+import { theme } from "./theme";
 import { ThemeProvider } from 'styled-components';
 import Container from "./Container";
 import Clock from "./Container/Clock";
@@ -8,10 +9,6 @@ import Paragraph from "./Container/Paragraph";
 import GridContainer from './Container/GridContainer';
 import Footer from "./Container/Footer";
 import Form from "./Container/Form";
-
-const theme = {
-  main: "#222",
-};
 
 function App() {
   const [result, setResult] = useState(0);
