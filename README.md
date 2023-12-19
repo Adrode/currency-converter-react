@@ -20,7 +20,9 @@ The code includes:
     - useState,
     - Controlled Components,
     - useEffect,
-    - Intervals
+    - Intervals,
+    - Styled Components
+    - Custom Hooks
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
