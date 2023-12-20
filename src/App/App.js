@@ -3,12 +3,12 @@ import { currencies } from "./currencies";
 import { theme } from "./theme";
 import { ThemeProvider } from 'styled-components';
 import Container from "./Container";
-import Clock from "./Container/Clock";
-import Header from "./Container/Header";
-import Paragraph from "./Container/Paragraph";
-import GridContainer from './Container/GridContainer';
-import Footer from "./Container/Footer";
-import Form from "./Container/Form";
+import Clock from "./Clock";
+import Header from "./Header";
+import Paragraph from "./Paragraph";
+import GridContainer from './GridContainer';
+import Footer from "./Footer";
+import Form from "./Form";
 
 function App() {
   const [result, setResult] = useState(0);
