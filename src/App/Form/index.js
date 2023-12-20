@@ -36,7 +36,6 @@ const Form = ({ countResult }) => {
                                 </option>
                             ))}
                         </Field>
-
                     </label>
                 </Paragraph>
                 <Paragraph>

@@ -1,16 +1,14 @@
-import { HeaderTitle } from "./styled";
+import { Title } from "./styled";
 
-const Header = ({ title, date }) => {
-    return (
-        <header>
-            <div>
-                {date}
-            </div>
-            <HeaderTitle>
-                {title}
-            </HeaderTitle>
-        </header>
-    )
-};
+const Header = ({ title, date }) => (
+    <header>
+        <div>
+            {date}
+        </div>
+        <Title>
+            {title}
+        </Title>
+    </header>
+);
 
 export default Header;

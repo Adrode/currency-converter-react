@@ -15,8 +15,8 @@ export const GlobalStyle = createGlobalStyle`
         max-width: 600px;
         font-family: 'Montserrat', sans-serif;
 
-        background-color: #333;
-        color: #eee;
+        background-color: ${({ theme }) => theme.color.mineShaft};
+        color: ${({ theme }) => theme.color.gallery};
 
         word-break: break-word;
 

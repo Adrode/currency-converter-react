@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const Main = styled.main`
+export const StyledContainer = styled.main`
     padding: 50px;
-    background-color: #444;
-    border: 1px solid black;
+    background-color: ${({ theme }) => theme.color.tundora};
+    border: 1px solid ${({ theme }) => theme.color.black};
     border-radius: 20px;
 `;

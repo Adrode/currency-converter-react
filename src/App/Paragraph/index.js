@@ -1,12 +1,12 @@
 import { StyledParagraph } from "./styled";
 
-const Paragraph = ({ text, value }) => {
-    if (typeof value === "number") {
-        return (
-            <StyledParagraph>{text}<strong>{value.toFixed(2)}{" PLN"}</strong></StyledParagraph>
-        );
-    }
-    return <StyledParagraph>{text}</StyledParagraph>;
-};
+const Paragraph = ({ text, value }) => (
+    <StyledParagraph>
+        {text}
+        {typeof value === "number"
+        ? <strong>{value.toFixed(2)}{" PLN"}</strong>
+        : null}
+    </StyledParagraph>
+);
 
 export default Paragraph;

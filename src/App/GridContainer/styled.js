@@ -1,16 +1,15 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const StyledContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 5px;
 `;
 
 export const Element = styled.p`
     text-align: center;
     line-height: 1.5;
-    border: 1px solid white;
+    border: 1px solid ${({ theme }) => theme.color.white};
     padding: 10px 0px;
     margin: 10px;
-    background-color: ${({theme}) => theme.main};
+    background-color: ${({theme}) => theme.color.mineShaft};
 `;

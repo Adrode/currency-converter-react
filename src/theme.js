@@ -1,4 +1,10 @@
 export const theme = {
-    main: "#222",
+    color: {
+      black: "#000",
+      tundora: "#444",
+      gallery: "#eee",
+      mineShaft: "#222",
+      white: "#fff",
+    },
   };
   

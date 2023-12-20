@@ -1,8 +1,8 @@
 import { currencies } from '../currencies';
-import { Container, Element } from "./styled";
+import { StyledContainer, Element } from "./styled";
 
 const GridContainer = () => (
-    <Container>
+    <StyledContainer>
         {currencies.map(sourceCurrency => (
             <Element
                 key={sourceCurrency.id}
@@ -10,7 +10,7 @@ const GridContainer = () => (
                 {sourceCurrency.name}{" = "}<strong>{sourceCurrency.rate}</strong>
             </Element>
         ))}
-    </Container>
+    </StyledContainer>
 );
 
 export default GridContainer;

@@ -7,14 +7,14 @@ export const StyledForm = styled.form`
 
 export const Fieldset = styled.fieldset`
     padding: 20px;
-    background-color: ${({ theme }) => theme.main};
+    background-color: ${({ theme }) => theme.color.mineShaft};
 `;
 
 export const Legend = styled.legend`
-    border: 2px solid #eee;
+    border: 2px solid ${({ theme }) => theme.color.gallery};
     border-radius: 15px 0px;
-    background-color: ${({ theme }) => theme.main};
-    padding: 7px 15px;
+    background-color: ${({ theme }) => theme.color.mineShaft};
+    padding: 10px 15px;
     text-transform: uppercase;
 `;
 
@@ -37,20 +37,20 @@ export const Field = styled.select`
 export const Button = styled.button`
     text-transform: uppercase;
     margin-top: 20px;
-    border: 2px solid #eee;
+    border: 2px solid ${({ theme }) => theme.color.gallery};
     border-radius: 5px;
     padding: 10px;
     width: 100%;
-    color: #eee;
-    background-color: ${({ theme }) => theme.main};
-    transition: 0.5s;
+    color: ${({ theme }) => theme.color.gallery};
+    background-color: ${({ theme }) => theme.color.mineShaft};
+    transition: 0.3s;
 
     &:hover {
-        background-color: hsl(0, 0%, 25%);
+        filter: brightness(130%);
         transform: scale(1.05);
     }
 
     &:active {
-        background-color: hsl(0, 0%, 15%);
+        filter: brightness(100%);
     }
 `;
