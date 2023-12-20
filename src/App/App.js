@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import { currencies } from "./currencies";
-import { theme } from "./theme";
-import { ThemeProvider } from 'styled-components';
 import Container from "./Container";
 import Clock from "./Clock";
 import Header from "./Header";
@@ -20,29 +18,28 @@ function App() {
   };
 
   return (
-    <ThemeProvider theme={theme}>
-      <Container>
-        <Clock />
-        <Header
-          title="Currency converter"
-        />
-        <Paragraph
-          text="Convert choosen currencies to Polish zlotys 
+
+    <Container>
+      <Clock />
+      <Header
+        title="Currency converter"
+      />
+      <Paragraph
+        text="Convert choosen currencies to Polish zlotys 
         at the exchange rate on 17/11/2023 by NBP."
-        />
-        <GridContainer />
-        <Form
-          countResult={countResult}
-        />
-        <Paragraph
-          text="RESULT: "
-          value={result}
-        />
-        <Footer
-          text="Page by Adrian W."
-        />
-      </Container>
-    </ThemeProvider>
+      />
+      <GridContainer />
+      <Form
+        countResult={countResult}
+      />
+      <Paragraph
+        text="RESULT: "
+        value={result}
+      />
+      <Footer
+        text="Page by Adrian W."
+      />
+    </Container>
   );
 }
 
