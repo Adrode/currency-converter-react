@@ -4,7 +4,6 @@ import Container from "./Container";
 import Clock from "./Clock";
 import Header from "./Header";
 import Paragraph from "./Paragraph";
-import GridContainer from './GridContainer';
 import Footer from "./Footer";
 import Form from "./Form";
 import Fetch from "./Fetch";
@@ -29,11 +28,11 @@ function App() {
         text="Convert choosen currencies to Polish zlotys 
         at the exchange rate on 17/11/2023 by NBP."
       />
-      <GridContainer />
       <Form
         countResult={countResult}
       />
       <Paragraph
+        hidden={result}
         text="RESULT: "
         value={result}
       />

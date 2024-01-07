@@ -1,11 +1,13 @@
 import { StyledParagraph } from "./styled";
 
 const Paragraph = ({ text, value }) => (
-    <StyledParagraph>
+    <StyledParagraph
+        hidden={value === 0}
+    >
         {text}
         {typeof value === "number"
-        ? <strong>{value.toFixed(2)}{" PLN"}</strong>
-        : null}
+            ? <strong>{value.toFixed(2)}{" PLN"}</strong>
+            : null}
     </StyledParagraph>
 );
 
