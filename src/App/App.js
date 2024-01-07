@@ -7,6 +7,7 @@ import Paragraph from "./Paragraph";
 import GridContainer from './GridContainer';
 import Footer from "./Footer";
 import Form from "./Form";
+import Fetch from "./Fetch";
 
 function App() {
   const [result, setResult] = useState(0);
@@ -39,6 +40,7 @@ function App() {
       <Footer
         text="Page by Adrian W."
       />
+      <Fetch />
     </Container>
   );
 }
