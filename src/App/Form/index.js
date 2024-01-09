@@ -1,9 +1,11 @@
 import { useState } from 'react';
-import { currencies } from "../currencies";
+import { useRates } from "../Fetch";
 import { StyledForm, Fieldset, Legend, Paragraph, LabelText, Field, Button } from "./styled";
 
 const Form = ({ countResult }) => {
-    const [currency, setCurrency] = useState(currencies[0].name);
+    const ratesData = useRates();
+
+    const [currency, setCurrency] = useState();
     const [inputValue, setInputValue] = useState("");
 
     const onFormSubmit = (event) => {
@@ -27,12 +29,12 @@ const Form = ({ countResult }) => {
                             value={currency}
                             onChange={onSelectChange}
                         >
-                            {currencies.map(sourceCurrency => (
+                            {Object.keys(ratesData.data).map(rate => (
                                 <option
-                                    key={sourceCurrency.id}
-                                    value={sourceCurrency.name}
+                                    key={rate}
+                                    value={rate}
                                 >
-                                    {sourceCurrency.fullname}
+                                    {rate}
                                 </option>
                             ))}
                         </Field>
@@ -40,7 +42,7 @@ const Form = ({ countResult }) => {
                 </Paragraph>
                 <Paragraph>
                     <label>
-                        <LabelText>Enter the amount:</LabelText>
+                        <LabelText>Enter USD amount:</LabelText>
                         <Field
                             as="input"
                             type="number"

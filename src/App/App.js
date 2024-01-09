@@ -1,18 +1,18 @@
 import { useState } from 'react';
-import { currencies } from "./currencies";
 import Container from "./Container";
 import Clock from "./Clock";
 import Header from "./Header";
 import Paragraph from "./Paragraph";
 import Footer from "./Footer";
 import Form from "./Form";
-import Fetch from "./Fetch";
+import { useRates } from "./Fetch";
 
 function App() {
   const [result, setResult] = useState(0);
+  const ratesData = useRates();
 
   const countResult = (currency, inputValue) => {
-    const rate = currencies.find(({ name }) => name === currency).rate;
+    const rate = ratesData.data[currency].value;
 
     setResult(inputValue * rate);
   };
@@ -39,7 +39,6 @@ function App() {
       <Footer
         text="Page by Adrian W."
       />
-      <Fetch />
     </Container>
   );
 }

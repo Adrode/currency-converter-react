@@ -1,18 +1,36 @@
 import { useState, useEffect } from "react";
 
-const Fetch = () => {
-    const [ratesData, setRatesData] = useState({});
+export const useRates = () => {
+    const [ratesData, setRatesData] = useState({
+        status: "loading",
+    });
+
+    const fetchRatesData = async () => {
+        try {
+            const response = await fetch("/currency-converter-react/newCurrencies.json");
+
+            if(!response.ok) {
+                throw new Error(response.statusText);
+            }
+
+            const { meta, data } = await response.json();
+
+            setRatesData({
+                status: "success",
+                meta,
+                data,
+            });
+        }
+        catch (error) {
+            setRatesData({
+                status: "error",
+            });
+        }
+    };
 
     useEffect(() => {
-        fetch("public/newCurrencies.json")
-            .then(response => response.json())
-            .then(currencies => console.log(currencies));
-        /*fetch("/https://api.currencyapi.com/v3/latest?apikey=cur_live_l6j0fBqqMwtFBjnvWA9uk2Tg0I8v8lrO8q3FBHEi")
-            .then(response => response.json())
-            .then(currencies => {
-                setRatesData((ratesData) => ratesData = { ...currencies })
-            });*/
-    }, []);
-};
+        setTimeout(fetchRatesData, 1000);
+    }, [])
 
-export default Fetch;
+    return ratesData;
+};
