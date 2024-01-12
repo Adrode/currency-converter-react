@@ -1,5 +1,6 @@
 import Container from "./Container";
 import Clock from "./Clock";
+import Loading from "./Loading";
 import Header from "./Header";
 import Paragraph from "./Paragraph";
 import Footer from "./Footer";
@@ -8,12 +9,12 @@ import Form from "./Form";
 function App() {
 
   return (
-
     <Container>
       <Clock />
       <Header
         title="Currency converter"
       />
+      <Loading />
       <Paragraph
         text="Convert choosen currencies to Polish zlotys 
         at the exchange rate on 17/11/2023 by NBP."

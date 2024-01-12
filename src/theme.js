@@ -5,6 +5,8 @@ export const theme = {
       gallery: "#eee",
       mineShaft: "#222",
       white: "#fff",
+      malachite: "#11dc3d",
+      milanoRed: "#B10d0d",
     },
   };
   
