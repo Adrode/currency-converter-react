@@ -1,12 +1,19 @@
 import { useState } from 'react';
-import { useRates } from "../Fetch";
+import { useRates } from "../useRates";
 import { StyledForm, Fieldset, Legend, Paragraph, LabelText, Field, Button } from "./styled";
 
-const Form = ({ countResult }) => {
+const Form = () => {
     const ratesData = useRates();
 
     const [currency, setCurrency] = useState();
     const [inputValue, setInputValue] = useState("");
+    const [result, setResult] = useState(0);
+
+    const countResult = (currency, inputValue) => {
+        const rate = ratesData.data[currency].value;
+
+        setResult(inputValue * rate);
+    };
 
     const onFormSubmit = (event) => {
         event.preventDefault();
