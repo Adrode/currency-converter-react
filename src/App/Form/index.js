@@ -6,6 +6,7 @@ const Form = () => {
     const ratesData = useRates();
 
     const [currency, setCurrency] = useState();
+    const [currencyText, setCurrencyText] = useState("");
     const [inputValue, setInputValue] = useState("");
     const [result, setResult] = useState(0);
 
@@ -17,7 +18,9 @@ const Form = () => {
 
     const onFormSubmit = (event) => {
         event.preventDefault();
+        
         countResult(currency, inputValue);
+        setCurrencyText(currency);
     };
 
     const onSelectChange = ({ target }) => setCurrency(target.value);
@@ -25,10 +28,12 @@ const Form = () => {
 
     return (
         <StyledForm onSubmit={onFormSubmit}>
+            <Paragraph
+                hidden={!result}
+            >
+                Exchange rate based on data from {ratesData.status === "success" && new Date(ratesData.meta.last_updated_at).toLocaleDateString(undefined, { day: "numeric", month: "numeric", year: "numeric"})} by currencyapi.com.
+            </Paragraph>
             <Fieldset>
-                <Legend>
-                    Converter
-                </Legend>
                 <Paragraph>
                     <label>
                         <LabelText>Choose currency:</LabelText>
@@ -67,6 +72,11 @@ const Form = () => {
             >
                 Convert
             </Button>
+            <Paragraph
+                hidden={!result}
+            >
+                Amount in <strong>{currencyText}</strong>: {result.toFixed(2)}
+            </Paragraph>
         </StyledForm>
     )
 };

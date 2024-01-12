@@ -20,6 +20,10 @@ export const Legend = styled.legend`
 
 export const Paragraph = styled.p`
     text-align: center;
+
+    &:hidden {
+        display: none;
+    }
 `;
 
 export const LabelText = styled.span`
