@@ -29,12 +29,12 @@ const Form = ({ countResult }) => {
                             value={currency}
                             onChange={onSelectChange}
                         >
-                            {Object.keys(ratesData.data).map(rate => (
+                            {ratesData.status === "success" && Object.keys(ratesData.data).map(element => (
                                 <option
-                                    key={rate}
-                                    value={rate}
+                                    key={element}
+                                    value={element}
                                 >
-                                    {rate}
+                                    {element}
                                 </option>
                             ))}
                         </Field>
