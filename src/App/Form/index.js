@@ -34,7 +34,7 @@ const Form = ({ countResult }) => {
                                     key={element}
                                     value={element}
                                 >
-                                    {element}
+                                    {element} - {(ratesData.data[element].value).toFixed(2)}
                                 </option>
                             ))}
                         </Field>
