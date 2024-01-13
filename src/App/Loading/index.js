@@ -5,7 +5,7 @@ const Loading = () => {
         <StyledLoading>
             Loading data from<br />
             <StyledURL
-                href = "https://currencyapi.com/">currnecyapi.com
+                href = "https://currencyapi.com/">currencyapi.com
             </StyledURL>.<br />
             Please, wait.
         </StyledLoading>

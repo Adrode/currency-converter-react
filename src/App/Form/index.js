@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useRates } from "../useRates";
-import { StyledForm, Fieldset, Paragraph, LabelText, Field, Button } from "./styled";
+import { StyledForm, Fieldset, Paragraph, LabelText, Field, Button, StyledURL } from "./styled";
 import Loading from "../Loading";
 import LoadingError from "../LoadingError";
 
@@ -84,7 +84,12 @@ const Form = () => {
                                 Amount in <strong>{currencyText}</strong>: {result.toFixed(2)}
                             </Paragraph>
                             <Paragraph $resized>
-                                Exchange rate based on data from {ratesData.status === "success" && new Date(ratesData.meta.last_updated_at).toLocaleDateString(undefined, { day: "numeric", month: "numeric", year: "numeric" })} by currencyapi.com.
+                                Exchange rate based on data from {ratesData.status === "success"
+                                    &&
+                                    new Date(ratesData.meta.last_updated_at).toLocaleDateString(undefined,
+                                        { day: "numeric", month: "numeric", year: "numeric" })} by
+                                <StyledURL href="https://currencyapi.com/"> currencyapi.com
+                                </StyledURL>.<br />
                             </Paragraph>
                         </>
                     ))}

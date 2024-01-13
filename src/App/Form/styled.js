@@ -59,3 +59,14 @@ export const Button = styled.button`
         filter: brightness(100%);
     }
 `;
+
+export const StyledURL = styled.a`
+    text-decoration: none;
+    transition: color 0.5s;
+
+    color: ${({ theme }) => theme.color.malachite};
+    
+    &:hover {
+        filter: brightness(150%);
+    };
+`;

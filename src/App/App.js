@@ -4,11 +4,8 @@ import Header from "./Header";
 import Paragraph from "./Paragraph";
 import Footer from "./Footer";
 import Form from "./Form";
-import { useRates } from "./useRates";
 
 function App() {
-  const { status } = useRates();
-  console.log(status);
 
   return (
     <Container>
