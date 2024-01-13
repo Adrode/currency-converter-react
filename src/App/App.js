@@ -14,7 +14,7 @@ function App() {
         title="Currency converter"
       />
       <Paragraph
-        text="Convert choosen currencies to USD."
+        text="Convert USD to the amount in your selected currency."
       />
       <Form />
       <Footer

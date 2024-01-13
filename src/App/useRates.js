@@ -7,7 +7,7 @@ export const useRates = () => {
 
     const fetchRatesData = async () => {
         try {
-            const response = await fetch("/currency-converter-react/newCurrencies.json");
+            const response = await fetch("https://api.currencyapi.com/v3/latest?apikey=cur_live_l6j0fBqqMwtFBjnvWA9uk2Tg0I8v8lrO8q3FBHEi");
 
             if(!response.ok) {
                 throw new Error(response.statusText);

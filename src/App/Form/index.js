@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useRates } from "../useRates";
 import { StyledForm, Fieldset, Paragraph, LabelText, Field, Button, StyledURL } from "./styled";
-import Loading from "../Loading";
-import LoadingError from "../LoadingError";
+import Loading from "./Loading";
+import LoadingError from "./LoadingError";
 
 const Form = () => {
     const ratesData = useRates();
