@@ -28,11 +28,6 @@ const Form = () => {
 
     return (
         <StyledForm onSubmit={onFormSubmit}>
-            <Paragraph
-                hidden={!result}
-            >
-                Exchange rate based on data from {ratesData.status === "success" && new Date(ratesData.meta.last_updated_at).toLocaleDateString(undefined, { day: "numeric", month: "numeric", year: "numeric"})} by currencyapi.com.
-            </Paragraph>
             <Fieldset>
                 <Paragraph>
                     <label>
@@ -76,6 +71,9 @@ const Form = () => {
                 hidden={!result}
             >
                 Amount in <strong>{currencyText}</strong>: {result.toFixed(2)}
+            </Paragraph>
+            <Paragraph resized>
+                Exchange rate based on data from {ratesData.status === "success" && new Date(ratesData.meta.last_updated_at).toLocaleDateString(undefined, { day: "numeric", month: "numeric", year: "numeric"})} by currencyapi.com.
             </Paragraph>
         </StyledForm>
     )

@@ -6,7 +6,7 @@ export const theme = {
       mineShaft: "#222",
       white: "#fff",
       malachite: "#11dc3d",
-      milanoRed: "#B10d0d",
+      crimson: "#E31616",
     },
   };
   

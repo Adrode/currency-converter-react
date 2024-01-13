@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const StyledForm = styled.form`
-    margin: 40px auto;
+    margin: 20px auto;
     width: 100%;
 `;
 
@@ -24,6 +24,11 @@ export const Paragraph = styled.p`
     &:hidden {
         display: none;
     }
+
+    ${({ resized }) => resized && css`
+        font-size: 80%;
+        text-align: right;
+    `}
 `;
 
 export const LabelText = styled.span`

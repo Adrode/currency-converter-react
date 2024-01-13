@@ -1,12 +1,16 @@
 import Container from "./Container";
 import Clock from "./Clock";
 import Loading from "./Loading";
+import LoadingError from "./LoadingError";
 import Header from "./Header";
 import Paragraph from "./Paragraph";
 import Footer from "./Footer";
 import Form from "./Form";
+import { useRates } from "./useRates";
 
 function App() {
+  const { status } = useRates();
+  console.log(status);
 
   return (
     <Container>
@@ -14,12 +18,15 @@ function App() {
       <Header
         title="Currency converter"
       />
-      <Loading />
       <Paragraph
-        text="Convert choosen currencies to Polish zlotys 
-        at the exchange rate on 17/11/2023 by NBP."
+        text="Convert choosen currencies to USD."
       />
-      <Form />
+      {status === "loading"
+        ?
+        <Loading /> : <Form />}
+
+
+
       <Paragraph
       // hidden={result}
       // text="RESULT: "
