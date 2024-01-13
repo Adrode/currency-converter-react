@@ -14,14 +14,6 @@ export const Fieldset = styled.fieldset`
     border-radius: 20px;
 `;
 
-export const Legend = styled.legend`
-    border: 2px solid ${({ theme }) => theme.color.gallery};
-    border-radius: 15px 0px;
-    background-color: ${({ theme }) => theme.color.mineShaft};
-    padding: 10px 15px;
-    text-transform: uppercase;
-`;
-
 export const Paragraph = styled.p`
     text-align: center;
 
@@ -29,7 +21,7 @@ export const Paragraph = styled.p`
         display: none;
     }
 
-    ${({ resized }) => resized && css`
+    ${({ $resized }) => $resized && css`
         font-size: 80%;
         text-align: right;
     `}

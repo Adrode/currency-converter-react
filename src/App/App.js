@@ -1,7 +1,5 @@
 import Container from "./Container";
 import Clock from "./Clock";
-import Loading from "./Loading";
-import LoadingError from "./LoadingError";
 import Header from "./Header";
 import Paragraph from "./Paragraph";
 import Footer from "./Footer";
@@ -21,17 +19,7 @@ function App() {
       <Paragraph
         text="Convert choosen currencies to USD."
       />
-      {status === "loading"
-        ?
-        <Loading /> : <Form />}
-
-
-
-      <Paragraph
-      // hidden={result}
-      // text="RESULT: "
-      // value={result}
-      />
+      <Form />
       <Footer
         text="Page by Adrian W."
       />
