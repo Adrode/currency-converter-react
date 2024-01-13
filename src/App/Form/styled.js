@@ -3,11 +3,15 @@ import styled, { css } from "styled-components";
 export const StyledForm = styled.form`
     margin: 20px auto;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 
 export const Fieldset = styled.fieldset`
     padding: 20px;
     background-color: ${({ theme }) => theme.color.mineShaft};
+    border-radius: 20px;
 `;
 
 export const Legend = styled.legend`

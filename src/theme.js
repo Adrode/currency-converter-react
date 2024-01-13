@@ -8,5 +8,8 @@ export const theme = {
       malachite: "#11dc3d",
       crimson: "#E31616",
     },
+    breakpoint: {
+      primary: 767,
+    }
   };
   
