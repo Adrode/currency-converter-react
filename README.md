@@ -1,10 +1,10 @@
 # Currency Converter
 
-[Currency Converter Page](https://adrode.github.io/currency-converter-react/)
+[DEMO](https://adrode.github.io/currency-converter-react/)
 
 ![Currency Converter page image](src/images/converterWebpageImage.png)
 
-Simple page for converting EUR, USD, CHF or GBP to PLN.\
+Simple page for converting USD to choosen currencies.\
  Use select input to choose between currencies, type any value and press 'Convert' button to see the result below.
 
 The code includes:
@@ -15,14 +15,17 @@ The code includes:
     - Icon
  - CSS:
     - simple CSS styling,
-    - transition, transform
+    - transition, transform,
+    - Flex
  - JS, React:
     - useState,
     - Controlled Components,
     - useEffect,
     - Intervals,
-    - Styled Components
-    - Custom Hooks
+    - Styled Components,
+    - Custom Hooks,
+    - API (Fetch),
+    - Clock (custom made)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
